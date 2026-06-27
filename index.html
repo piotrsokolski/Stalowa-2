@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#14171a" />
+  <title>Stalowa 76 — Ponadczasowa elegancja w sercu Wrocławia</title>
+  <meta name="description" content="Stalowa 76 — kameralna inwestycja premium na wrocławskich Gajowicach. 51 apartamentów 28–83 m², dwupoziomowy garaż, industrialna elegancja. Od 14 900 zł/m². Wrocław Investment." />
+  <meta name="author" content="Wrocław Investment Steel Apartments Sp. z o.o." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Stalowa 76 — Ponadczasowa elegancja w sercu Wrocławia" />
+  <meta property="og:description" content="51 apartamentów premium na Gajowicach. 28–83 m², dwupoziomowy garaż, zielony dziedziniec. Od 14 900 zł/m²." />
+  <meta property="og:image" content="assets/img/og-image.svg" />
+  <meta property="og:locale" content="pl_PL" />
+
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- ░░ Preloader ░░ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__mark">
+      <span class="preloader__s">S</span>
+      <span class="preloader__num">76</span>
+    </div>
+    <div class="preloader__bar"><span></span></div>
+  </div>
+
+  <!-- ░░ Progress rail ░░ -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ░░ Header ░░ -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="#top" class="brand" aria-label="Stalowa 76 — strona główna">
+        <span class="brand__mark">S<span>76</span></span>
+        <span class="brand__name">Stalowa&nbsp;76</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Nawigacja główna">
+        <a href="#projekt" data-i18n="nav.project">Projekt</a>
+        <a href="#architektura" data-i18n="nav.architecture">Architektura</a>
+        <a href="#lokalizacja" data-i18n="nav.location">Lokalizacja</a>
+        <a href="#apartamenty" data-i18n="nav.apartments">Apartamenty</a>
+        <a href="#inwestycja" data-i18n="nav.investment">Inwestycja</a>
+        <a href="#kontakt" data-i18n="nav.contact">Kontakt</a>
+      </nav>
+
+      <div class="header__actions">
+        <div class="lang" role="group" aria-label="Wybór języka">
+          <button class="lang__btn is-active" data-lang="pl" type="button">PL</button>
+          <span class="lang__sep">/</span>
+          <button class="lang__btn" data-lang="en" type="button">EN</button>
+        </div>
+        <a href="#kontakt" class="btn btn--solid btn--sm" data-i18n="nav.cta">Umów prezentację</a>
+        <button class="burger" id="burger" type="button" aria-label="Menu" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ░░ Hero ░░ -->
+    <section class="hero" id="hero">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__layer hero__layer--sky" data-parallax="0.15"></div>
+        <div class="hero__layer hero__layer--build" data-parallax="0.32"></div>
+        <div class="hero__grain"></div>
+      </div>
+
+      <div class="hero__content">
+        <p class="hero__eyebrow reveal" data-i18n="hero.eyebrow">Wrocław · Gajowice · Nowa inwestycja</p>
+        <h1 class="hero__title">
+          <span class="reveal" data-i18n="hero.title1">Ponadczasowa</span>
+          <span class="reveal hero__title-em" data-i18n="hero.title2">elegancja</span>
+          <span class="reveal" data-i18n="hero.title3">w sercu miasta</span>
+        </h1>
+        <p class="hero__lead reveal" data-i18n="hero.lead">
+          51 apartamentów, w których industrialny charakter Wrocławia spotyka się
+          z dyskretnym luksusem. Architektura, która przetrwa pokolenia.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#apartamenty" class="btn btn--solid" data-i18n="hero.cta1">Zobacz apartamenty</a>
+          <a href="#projekt" class="btn btn--ghost" data-i18n="hero.cta2">Poznaj projekt</a>
+        </div>
+      </div>
+
+      <div class="hero__meta">
+        <a href="#projekt" class="hero__scroll" aria-label="Przewiń w dół">
+          <span data-i18n="hero.scroll">Przewiń</span>
+          <span class="hero__scroll-line"></span>
+        </a>
+        <p class="hero__price reveal">
+          <span class="hero__price-label" data-i18n="hero.priceLabel">Ceny już od</span>
+          <span class="hero__price-val">14&nbsp;900&nbsp;<small>zł/m²</small></span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ░░ Stats marquee ░░ -->
+    <section class="stats" aria-label="Kluczowe dane inwestycji">
+      <div class="stats__grid">
+        <div class="stat reveal">
+          <span class="stat__num" data-count="51">51</span>
+          <span class="stat__label" data-i18n="stats.apartments">apartamentów</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__num"><span data-count="28">28</span>–<span data-count="83">83</span></span>
+          <span class="stat__label" data-i18n="stats.size">m² metraży</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__num" data-count="5">5</span>
+          <span class="stat__label" data-i18n="stats.floors">kondygnacji</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__num" data-count="2">2</span>
+          <span class="stat__label" data-i18n="stats.garage">poziomy garażu</span>
+        </div>
+        <div class="stat reveal">
+          <span class="stat__num" data-count="10">10</span>
+          <span class="stat__label" data-i18n="stats.tram">min do Rynku</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ Project intro ░░ -->
+    <section class="section project" id="projekt">
+      <div class="section__head">
+        <p class="kicker reveal"><span>01</span><em data-i18n="project.kicker">Projekt</em></p>
+        <h2 class="section__title reveal" data-i18n="project.title">
+          Adres, który definiuje styl życia
+        </h2>
+      </div>
+      <div class="project__body">
+        <div class="project__lead reveal">
+          <p data-i18n="project.lead">
+            Stalowa 76 to kameralna, pięciokondygnacyjna inwestycja, w której
+            nowoczesna architektura spotyka się z miejskim rytmem Gajowic.
+            Stworzona dla osób, które cenią komfort, estetykę i funkcjonalność —
+            od przytulnych kawalerek po przestronne apartamenty rodzinne
+            z rozległymi przeszkleniami.
+          </p>
+        </div>
+        <div class="project__points">
+          <article class="point reveal">
+            <h3 data-i18n="project.p1t">Industrialna dusza</h3>
+            <p data-i18n="project.p1d">Surowy detal, szlachetne materiały i przestrzenie wspólne utrzymane w subtelnym, industrialnym charakterze.</p>
+          </article>
+          <article class="point reveal">
+            <h3 data-i18n="project.p2t">Światło i przestrzeń</h3>
+            <p data-i18n="project.p2d">Duże przeszklenia, wysokie standardy akustyczne i przemyślane układy, które oddychają.</p>
+          </article>
+          <article class="point reveal">
+            <h3 data-i18n="project.p3t">Zielony dziedziniec</h3>
+            <p data-i18n="project.p3d">Wewnętrzny, kameralny dziedziniec z zielenią — oaza spokoju w samym centrum miasta.</p>
+          </article>
+          <article class="point reveal">
+            <h3 data-i18n="project.p4t">Dwupoziomowy garaż</h3>
+            <p data-i18n="project.p4d">Podziemny, dwupoziomowy garaż z miejscami postojowymi oraz infrastrukturą dla rowerów.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ Architecture (showcase) ░░ -->
+    <section class="section architecture" id="architektura">
+      <div class="arch__sticky">
+        <div class="arch__visual" aria-hidden="true">
+          <div class="arch__frame arch__frame--a"></div>
+          <div class="arch__frame arch__frame--b"></div>
+          <div class="arch__badge">
+            <span data-i18n="arch.badgeTop">Projekt</span>
+            <strong>Steel&nbsp;Apartments</strong>
+            <span data-i18n="arch.badgeBot">Wrocław 2027</span>
+          </div>
+        </div>
+      </div>
+      <div class="arch__text">
+        <p class="kicker reveal"><span>02</span><em data-i18n="arch.kicker">Architektura</em></p>
+        <h2 class="section__title reveal" data-i18n="arch.title">Forma, która się nie starzeje</h2>
+        <p class="arch__para reveal" data-i18n="arch.p1">
+          Elewacja Stalowej 76 to studium powściągliwości — stal, szkło i ciepła
+          struktura tynku komponują się w bryłę pełną charakteru, ale wolną od
+          przejściowych mód. To architektura na dekady.
+        </p>
+        <p class="arch__para reveal" data-i18n="arch.p2">
+          Każdy detal — od profili okiennych po oświetlenie części wspólnych —
+          został zaprojektowany tak, by codzienność stała się odrobinę bardziej
+          wyrafinowana.
+        </p>
+        <ul class="arch__list reveal">
+          <li data-i18n="arch.l1">Szlachetne materiały elewacyjne i ślusarka klasy premium</li>
+          <li data-i18n="arch.l2">Reprezentacyjne, projektowane lobby wejściowe</li>
+          <li data-i18n="arch.l3">Ciche, energooszczędne windy do każdej kondygnacji</li>
+          <li data-i18n="arch.l4">Przemyślane oświetlenie i mała architektura</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ░░ Location ░░ -->
+    <section class="section location" id="lokalizacja">
+      <div class="section__head">
+        <p class="kicker reveal"><span>03</span><em data-i18n="loc.kicker">Lokalizacja</em></p>
+        <h2 class="section__title reveal" data-i18n="loc.title">
+          Gajowice — najbardziej dynamiczna część Wrocławia
+        </h2>
+      </div>
+
+      <div class="location__body">
+        <div class="location__map reveal" aria-hidden="true">
+          <div class="map">
+            <div class="map__grid"></div>
+            <div class="map__roads"></div>
+            <div class="map__pin">
+              <span class="map__pin-dot"></span>
+              <span class="map__pin-pulse"></span>
+              <span class="map__pin-label">Stalowa&nbsp;76</span>
+            </div>
+            <span class="map__poi" style="--x:22%;--y:30%" data-poi="Rynek"></span>
+            <span class="map__poi" style="--x:74%;--y:62%" data-poi="Park"></span>
+            <span class="map__poi" style="--x:60%;--y:22%" data-poi="Dworzec"></span>
+            <span class="map__poi" style="--x:35%;--y:72%" data-poi="Tramwaj"></span>
+          </div>
+        </div>
+
+        <div class="location__list">
+          <div class="dist reveal">
+            <span class="dist__val">100&nbsp;m</span>
+            <span class="dist__name" data-i18n="loc.d1">do przystanków komunikacji miejskiej</span>
+          </div>
+          <div class="dist reveal">
+            <span class="dist__val">10&nbsp;min</span>
+            <span class="dist__name" data-i18n="loc.d2">tramwajem do Rynku</span>
+          </div>
+          <div class="dist reveal">
+            <span class="dist__val">5&nbsp;min</span>
+            <span class="dist__name" data-i18n="loc.d3">do parków i terenów zielonych</span>
+          </div>
+          <div class="dist reveal">
+            <span class="dist__val">∞</span>
+            <span class="dist__name" data-i18n="loc.d4">restauracji, kawiarni i usług w zasięgu spaceru</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ Apartments ░░ -->
+    <section class="section apartments" id="apartamenty">
+      <div class="section__head">
+        <p class="kicker reveal"><span>04</span><em data-i18n="apt.kicker">Apartamenty</em></p>
+        <h2 class="section__title reveal" data-i18n="apt.title">Wybierz przestrzeń dla siebie</h2>
+        <p class="section__sub reveal" data-i18n="apt.sub">
+          Od kompaktowych kawalerek inwestycyjnych po przestronne, rodzinne układy.
+          Aktualnie dostępnych 13 apartamentów.
+        </p>
+      </div>
+
+      <div class="apt__grid">
+        <article class="card reveal" tabindex="0">
+          <div class="card__plan card__plan--studio" aria-hidden="true"></div>
+          <div class="card__body">
+            <h3 class="card__title" data-i18n="apt.c1t">Kawalerki</h3>
+            <p class="card__meta">28–35 m² · <span data-i18n="apt.rooms1">1 pokój</span></p>
+            <p class="card__desc" data-i18n="apt.c1d">Idealne pod wynajem — kompaktowe, ustawne, gotowe na zysk.</p>
+            <p class="card__price"><span data-i18n="apt.from">od</span> 523&nbsp;000&nbsp;zł</p>
+          </div>
+        </article>
+        <article class="card reveal" tabindex="0">
+          <div class="card__plan card__plan--two" aria-hidden="true"></div>
+          <div class="card__body">
+            <h3 class="card__title" data-i18n="apt.c2t">Dwupokojowe</h3>
+            <p class="card__meta">38–52 m² · <span data-i18n="apt.rooms2">2 pokoje</span></p>
+            <p class="card__desc" data-i18n="apt.c2d">Najpopularniejszy wybór — komfort dla pary i pierwsze własne M.</p>
+            <p class="card__price"><span data-i18n="apt.from">od</span> 612&nbsp;000&nbsp;zł</p>
+          </div>
+        </article>
+        <article class="card reveal" tabindex="0">
+          <div class="card__plan card__plan--three" aria-hidden="true"></div>
+          <div class="card__body">
+            <h3 class="card__title" data-i18n="apt.c3t">Trzypokojowe</h3>
+            <p class="card__meta">55–68 m² · <span data-i18n="apt.rooms3">3 pokoje</span></p>
+            <p class="card__desc" data-i18n="apt.c3d">Przestrzeń, która rośnie razem z rodziną. Z balkonem lub loggią.</p>
+            <p class="card__price"><span data-i18n="apt.from">od</span> 845&nbsp;000&nbsp;zł</p>
+          </div>
+        </article>
+        <article class="card reveal" tabindex="0">
+          <div class="card__plan card__plan--four" aria-hidden="true"></div>
+          <div class="card__body">
+            <h3 class="card__title" data-i18n="apt.c4t">Apartamenty rodzinne</h3>
+            <p class="card__meta">70–83 m² · <span data-i18n="apt.rooms4">4 pokoje</span></p>
+            <p class="card__desc" data-i18n="apt.c4d">Najwyższy standard, rozległe przeszklenia i miejsce dla każdego.</p>
+            <p class="card__price"><span data-i18n="apt.from">od</span> 1&nbsp;090&nbsp;000&nbsp;zł</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="apt__cta reveal">
+        <a href="#kontakt" class="btn btn--solid" data-i18n="apt.cta">Pobierz pełną ofertę i ceny</a>
+      </div>
+    </section>
+
+    <!-- ░░ Amenities ░░ -->
+    <section class="section amenities">
+      <div class="section__head">
+        <p class="kicker reveal"><span>05</span><em data-i18n="am.kicker">Standard</em></p>
+        <h2 class="section__title reveal" data-i18n="am.title">Detale, które robią różnicę</h2>
+      </div>
+      <ul class="amenity__grid">
+        <li class="amenity reveal"><svg viewBox="0 0 24 24" class="amenity__ico"><path d="M3 11l9-7 9 7"/><path d="M5 10v9h14v-9"/></svg><span data-i18n="am.a1">Dwupoziomowy garaż podziemny</span></li>
+        <li class="amenity reveal"><svg viewBox="0 0 24 24" class="amenity__ico"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg><span data-i18n="am.a2">Ciche windy do każdego piętra</span></li>
+        <li class="amenity reveal"><svg viewBox="0 0 24 24" class="amenity__ico"><path d="M4 20V8l8-5 8 5v12"/><path d="M9 20v-6h6v6"/></svg><span data-i18n="am.a3">Reprezentacyjne lobby</span></li>
+        <li class="amenity reveal"><svg viewBox="0 0 24 24" class="amenity__ico"><path d="M12 3v18"/><path d="M5 8c4 0 7 2 7 5"/><path d="M19 8c-4 0-7 2-7 5"/></svg><span data-i18n="am.a4">Zielony dziedziniec</span></li>
+        <li class="amenity reveal"><svg viewBox="0 0 24 24" class="amenity__ico"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg><span data-i18n="am.a5">Rozległe przeszklenia</span></li>
+        <li class="amenity reveal"><svg viewBox="0 0 24 24" class="amenity__ico"><circle cx="7" cy="17" r="3"/><circle cx="17" cy="17" r="3"/><path d="M7 17l4-7h5"/></svg><span data-i18n="am.a6">Infrastruktura rowerowa</span></li>
+        <li class="amenity reveal"><svg viewBox="0 0 24 24" class="amenity__ico"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8 2 9.4h7.6z"/></svg><span data-i18n="am.a7">Materiały klasy premium</span></li>
+        <li class="amenity reveal"><svg viewBox="0 0 24 24" class="amenity__ico"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg><span data-i18n="am.a8">Energooszczędne rozwiązania</span></li>
+      </ul>
+    </section>
+
+    <!-- ░░ Investment ░░ -->
+    <section class="section invest" id="inwestycja">
+      <div class="invest__inner">
+        <div class="invest__text">
+          <p class="kicker kicker--light reveal"><span>06</span><em data-i18n="inv.kicker">Inwestycja</em></p>
+          <h2 class="section__title section__title--light reveal" data-i18n="inv.title">
+            Adres, który pracuje na siebie
+          </h2>
+          <p class="invest__lead reveal" data-i18n="inv.lead">
+            Gajowice to jedna z najszybciej zyskujących na wartości dzielnic
+            Wrocławia. Kameralna skala, doskonała komunikacja i rosnący popyt na
+            wynajem czynią Stalową 76 przemyślaną decyzją — zarówno na własne
+            mieszkanie, jak i na lokatę kapitału.
+          </p>
+          <div class="invest__stats reveal">
+            <div><strong>14&nbsp;900&nbsp;zł</strong><span data-i18n="inv.s1">cena za m² — od</span></div>
+            <div><strong>2025–2027</strong><span data-i18n="inv.s2">harmonogram budowy</span></div>
+            <div><strong>13</strong><span data-i18n="inv.s3">apartamentów dostępnych</span></div>
+          </div>
+        </div>
+        <div class="invest__timeline reveal" aria-label="Harmonogram inwestycji">
+          <div class="tl">
+            <div class="tl__item is-done">
+              <span class="tl__dot"></span>
+              <div><strong data-i18n="inv.t1t">Zima 2025</strong><span data-i18n="inv.t1d">Rozpoczęcie budowy</span></div>
+            </div>
+            <div class="tl__item is-active">
+              <span class="tl__dot"></span>
+              <div><strong data-i18n="inv.t2t">2026</strong><span data-i18n="inv.t2d">Stan surowy i elewacja</span></div>
+            </div>
+            <div class="tl__item">
+              <span class="tl__dot"></span>
+              <div><strong data-i18n="inv.t3t">Wrzesień 2027</strong><span data-i18n="inv.t3d">Zakończenie i odbiory</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ░░ Contact ░░ -->
+    <section class="section contact" id="kontakt">
+      <div class="contact__grid">
+        <div class="contact__intro">
+          <p class="kicker reveal"><span>07</span><em data-i18n="ct.kicker">Kontakt</em></p>
+          <h2 class="section__title reveal" data-i18n="ct.title">Umów prywatną prezentację</h2>
+          <p class="contact__lead reveal" data-i18n="ct.lead">
+            Zostaw kontakt, a nasz doradca przedstawi pełną ofertę, dostępne
+            metraże i indywidualne warunki. Bez zobowiązań.
+          </p>
+
+          <div class="contact__info reveal">
+            <a class="cinfo" href="tel:+48717230000">
+              <span class="cinfo__label" data-i18n="ct.phone">Biuro sprzedaży</span>
+              <span class="cinfo__val">+48 71 723 00 00</span>
+            </a>
+            <a class="cinfo" href="mailto:biuro@stalowa76.pl">
+              <span class="cinfo__label" data-i18n="ct.email">E-mail</span>
+              <span class="cinfo__val">biuro@stalowa76.pl</span>
+            </a>
+            <div class="cinfo">
+              <span class="cinfo__label" data-i18n="ct.addr">Adres inwestycji</span>
+              <span class="cinfo__val">ul. Stalowa 76, Gajowice<br>Wrocław</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact__form reveal" id="leadForm" novalidate>
+          <div class="field">
+            <input type="text" id="name" name="name" required placeholder=" " autocomplete="name" />
+            <label for="name" data-i18n="ct.fName">Imię i nazwisko</label>
+          </div>
+          <div class="field">
+            <input type="tel" id="phone" name="phone" required placeholder=" " autocomplete="tel" />
+            <label for="phone" data-i18n="ct.fPhone">Telefon</label>
+          </div>
+          <div class="field">
+            <input type="email" id="email" name="email" placeholder=" " autocomplete="email" />
+            <label for="email" data-i18n="ct.fEmail">E-mail</label>
+          </div>
+          <div class="field">
+            <select id="interest" name="interest">
+              <option value="kawalerka" data-i18n="ct.opt1">Kawalerka (28–35 m²)</option>
+              <option value="2pok" data-i18n="ct.opt2">2 pokoje (38–52 m²)</option>
+              <option value="3pok" data-i18n="ct.opt3">3 pokoje (55–68 m²)</option>
+              <option value="4pok" data-i18n="ct.opt4">Apartament rodzinny (70–83 m²)</option>
+              <option value="inwestycja" data-i18n="ct.opt5">Cel inwestycyjny</option>
+            </select>
+            <label for="interest" class="field__label--static" data-i18n="ct.fInterest">Czym jesteś zainteresowany?</label>
+          </div>
+          <label class="consent">
+            <input type="checkbox" id="consent" name="consent" required />
+            <span data-i18n="ct.consent">Wyrażam zgodę na kontakt w sprawie oferty Stalowa 76.</span>
+          </label>
+          <button type="submit" class="btn btn--solid btn--block" data-i18n="ct.submit">Wyślij zgłoszenie</button>
+          <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ░░ Footer ░░ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark brand__mark--lg">S<span>76</span></span>
+        <p class="footer__tagline" data-i18n="ft.tagline">Ponadczasowa elegancja w sercu Wrocławia.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Stopka">
+        <a href="#projekt" data-i18n="nav.project">Projekt</a>
+        <a href="#lokalizacja" data-i18n="nav.location">Lokalizacja</a>
+        <a href="#apartamenty" data-i18n="nav.apartments">Apartamenty</a>
+        <a href="#kontakt" data-i18n="nav.contact">Kontakt</a>
+      </nav>
+      <div class="footer__dev">
+        <p data-i18n="ft.devLabel">Inwestor i deweloper</p>
+        <p class="footer__devname">Wrocław Investment<br>Steel Apartments Sp. z o.o.</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© <span id="year">2026</span> Stalowa 76 · Wrocław Investment</p>
+      <p data-i18n="ft.disclaimer">Wizualizacje mają charakter poglądowy i nie stanowią oferty w rozumieniu Kodeksu cywilnego.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

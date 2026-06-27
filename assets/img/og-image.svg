@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e1114"/>
+      <stop offset=".6" stop-color="#1c2126"/>
+      <stop offset="1" stop-color="#12161a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="72%" cy="14%" r="60%">
+      <stop offset="0" stop-color="#b08d57" stop-opacity=".34"/>
+      <stop offset="1" stop-color="#b08d57" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g stroke="#ffffff" stroke-opacity=".05">
+    <path d="M0 80 H1200 M0 160 H1200 M0 240 H1200 M0 320 H1200 M0 400 H1200 M0 480 H1200 M0 560 H1200"/>
+  </g>
+  <g fill="#2b3137" opacity=".85">
+    <rect x="930" y="300" width="150" height="330"/>
+    <rect x="1085" y="220" width="115" height="410"/>
+  </g>
+  <text x="90" y="250" font-family="Georgia, serif" font-size="40" letter-spacing="14" fill="#c9a978">WROCŁAW · GAJOWICE</text>
+  <text x="86" y="370" font-family="Georgia, serif" font-size="118" fill="#f5f2ec">Stalowa <tspan fill="#c9a978">76</tspan></text>
+  <text x="90" y="440" font-family="Georgia, serif" font-style="italic" font-size="44" fill="#9aa3ab">Ponadczasowa elegancja w sercu miasta</text>
+  <text x="90" y="540" font-family="Arial, sans-serif" font-size="26" letter-spacing="2" fill="#f5f2ec">51 apartamentów · 28–83 m² · od 14 900 zł/m²</text>
+</svg>
