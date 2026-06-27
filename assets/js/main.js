@@ -64,11 +64,14 @@
   if (reduceMotion || !("IntersectionObserver" in window)) {
     revealEls.forEach((el) => el.classList.add("is-in"));
   } else {
+    // threshold 0 so elements taller than the viewport (e.g. the floor-plan
+    // grid) still reveal — a fractional threshold can never be met by an
+    // element many times taller than the screen.
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
         if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); }
       });
-    }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+    }, { threshold: 0, rootMargin: "0px 0px -10% 0px" });
     revealEls.forEach((el) => io.observe(el));
   }
 

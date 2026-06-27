@@ -478,7 +478,7 @@ ul { list-style: none; }
 /* ---------- Floor-plan browser ---------- */
 .fp {
   max-width: var(--container); margin: 0 auto;
-  display: grid; grid-template-columns: 232px 1fr; gap: clamp(24px, 3vw, 48px);
+  display: grid; grid-template-columns: 232px minmax(0, 1fr); gap: clamp(24px, 3vw, 48px);
   align-items: start;
 }
 .fp__rail { position: sticky; top: 100px; display: grid; gap: 1.2rem; }
@@ -526,8 +526,9 @@ ul { list-style: none; }
   background-position: calc(100% - 14px) 52%, calc(100% - 9px) 52%; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; }
 .fp__count { font-size: .8rem; letter-spacing: .04em; color: var(--steel); margin-bottom: 1rem; }
 
-.fp__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.fp__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
 .fp-card {
+  min-width: 0;
   display: grid; grid-template-rows: auto 1fr; text-align: left; background: var(--paper);
   border: 1px solid var(--line-soft); border-radius: var(--radius); overflow: hidden;
   transition: transform .45s var(--ease), box-shadow .45s var(--ease), border-color .3s;
@@ -713,11 +714,14 @@ a.cinfo:hover { transform: translateX(6px); }
   .contact__grid { grid-template-columns: 1fr; }
   .apt__grid { grid-template-columns: repeat(2, 1fr); }
   .amenity__grid { grid-template-columns: repeat(2, 1fr); }
-  .fp { grid-template-columns: 1fr; }
+  .fp { grid-template-columns: minmax(0, 1fr); }
   .fp__rail { position: static; }
-  .fp__building { grid-auto-flow: column; grid-template-columns: repeat(5, 1fr); }
+  /* floor selector becomes a horizontal scroll strip so 5 floors never
+     overflow the viewport on narrow screens */
+  .fp__building { display: flex; gap: .5rem; overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: .4rem; scrollbar-width: thin; }
+  .fp-floor { flex: 0 0 auto; min-width: 104px; }
   .fp-floor:hover { transform: translateY(-3px); }
-  .fp__grid { grid-template-columns: repeat(2, 1fr); }
+  .fp__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .fp-detail { grid-template-columns: 1fr; }
   .fp-detail__plan { border-right: none; border-bottom: 1px solid var(--line-soft); }
 }
@@ -752,7 +756,12 @@ a.cinfo:hover { transform: translateX(6px); }
 @media (max-width: 480px) {
   .apt__grid { grid-template-columns: 1fr; }
   .amenity__grid { grid-template-columns: 1fr; }
-  .fp__grid { grid-template-columns: 1fr; }
+  /* keep 2 columns for unit cards even on phones so the list isn't an
+     endless single-column scroll; cards stay legible at this width */
+  .fp__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; }
+  .fp-card__info { padding: .7rem .75rem .85rem; }
+  .fp-card__top strong { font-size: 1.02rem; }
+  .fp-card__meta { font-size: .72rem; }
   .invest__stats { grid-template-columns: 1fr; gap: 1rem; }
   .card__desc { min-height: 0; }
 }
