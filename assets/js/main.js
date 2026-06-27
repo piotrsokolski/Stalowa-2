@@ -147,6 +147,7 @@
     document.documentElement.lang = lang;
     $$(".lang__btn").forEach((b) => b.classList.toggle("is-active", b.dataset.lang === lang));
     try { localStorage.setItem("stalowa-lang", lang); } catch (_) {}
+    document.dispatchEvent(new CustomEvent("stalowa:lang", { detail: { lang } }));
   }
   $$(".lang__btn").forEach((b) => b.addEventListener("click", () => setLang(b.dataset.lang)));
   try {

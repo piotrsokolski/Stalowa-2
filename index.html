@@ -258,54 +258,69 @@
         <p class="kicker reveal"><span>04</span><em data-i18n="apt.kicker">Apartamenty</em></p>
         <h2 class="section__title reveal" data-i18n="apt.title">Wybierz przestrzeń dla siebie</h2>
         <p class="section__sub reveal" data-i18n="apt.sub">
-          Od kompaktowych kawalerek inwestycyjnych po przestronne, rodzinne układy.
-          Aktualnie dostępnych 13 apartamentów.
+          Przeglądaj wszystkie 51 apartamentów piętro po piętrze. Filtruj według
+          liczby pokoi i dostępności, a następnie otwórz rzut, by poznać układ,
+          ekspozycję i cenę.
         </p>
       </div>
 
-      <div class="apt__grid">
-        <article class="card reveal" tabindex="0">
-          <div class="card__plan card__plan--studio" aria-hidden="true"></div>
-          <div class="card__body">
-            <h3 class="card__title" data-i18n="apt.c1t">Kawalerki</h3>
-            <p class="card__meta">28–35 m² · <span data-i18n="apt.rooms1">1 pokój</span></p>
-            <p class="card__desc" data-i18n="apt.c1d">Idealne pod wynajem — kompaktowe, ustawne, gotowe na zysk.</p>
-            <p class="card__price"><span data-i18n="apt.from">od</span> 523&nbsp;000&nbsp;zł</p>
-          </div>
-        </article>
-        <article class="card reveal" tabindex="0">
-          <div class="card__plan card__plan--two" aria-hidden="true"></div>
-          <div class="card__body">
-            <h3 class="card__title" data-i18n="apt.c2t">Dwupokojowe</h3>
-            <p class="card__meta">38–52 m² · <span data-i18n="apt.rooms2">2 pokoje</span></p>
-            <p class="card__desc" data-i18n="apt.c2d">Najpopularniejszy wybór — komfort dla pary i pierwsze własne M.</p>
-            <p class="card__price"><span data-i18n="apt.from">od</span> 612&nbsp;000&nbsp;zł</p>
-          </div>
-        </article>
-        <article class="card reveal" tabindex="0">
-          <div class="card__plan card__plan--three" aria-hidden="true"></div>
-          <div class="card__body">
-            <h3 class="card__title" data-i18n="apt.c3t">Trzypokojowe</h3>
-            <p class="card__meta">55–68 m² · <span data-i18n="apt.rooms3">3 pokoje</span></p>
-            <p class="card__desc" data-i18n="apt.c3d">Przestrzeń, która rośnie razem z rodziną. Z balkonem lub loggią.</p>
-            <p class="card__price"><span data-i18n="apt.from">od</span> 845&nbsp;000&nbsp;zł</p>
-          </div>
-        </article>
-        <article class="card reveal" tabindex="0">
-          <div class="card__plan card__plan--four" aria-hidden="true"></div>
-          <div class="card__body">
-            <h3 class="card__title" data-i18n="apt.c4t">Apartamenty rodzinne</h3>
-            <p class="card__meta">70–83 m² · <span data-i18n="apt.rooms4">4 pokoje</span></p>
-            <p class="card__desc" data-i18n="apt.c4d">Najwyższy standard, rozległe przeszklenia i miejsce dla każdego.</p>
-            <p class="card__price"><span data-i18n="apt.from">od</span> 1&nbsp;090&nbsp;000&nbsp;zł</p>
-          </div>
-        </article>
-      </div>
+      <!-- Interactive floor-plan browser -->
+      <div class="fp reveal" id="fp">
+        <aside class="fp__rail">
+          <p class="fp__rail-title" data-i18n="fp.floorTitle">Wybierz piętro</p>
+          <div class="fp__building" id="fpBuilding" role="group" aria-label="Wybór piętra"></div>
+          <p class="fp__legend">
+            <span class="fp__legdot fp__legdot--av"></span><span data-i18n="fp.available">Dostępne</span>
+            <span class="fp__legdot fp__legdot--re"></span><span data-i18n="fp.reserved">Rezerwacja</span>
+            <span class="fp__legdot fp__legdot--so"></span><span data-i18n="fp.sold">Sprzedane</span>
+          </p>
+        </aside>
 
-      <div class="apt__cta reveal">
-        <a href="#kontakt" class="btn btn--solid" data-i18n="apt.cta">Pobierz pełną ofertę i ceny</a>
+        <div class="fp__main">
+          <div class="fp__toolbar">
+            <div class="fp__filters">
+              <div class="chips" id="fpRooms" role="group" aria-label="Liczba pokoi">
+                <button type="button" class="chip is-active" data-rooms="all" data-i18n="fp.all">Wszystkie</button>
+                <button type="button" class="chip" data-rooms="1">1</button>
+                <button type="button" class="chip" data-rooms="2">2</button>
+                <button type="button" class="chip" data-rooms="3">3</button>
+                <button type="button" class="chip" data-rooms="4">4</button>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="fpAvail" />
+                <span class="switch__track"><span class="switch__thumb"></span></span>
+                <span class="switch__label" data-i18n="fp.availOnly">Tylko dostępne</span>
+              </label>
+            </div>
+            <div class="fp__sortwrap">
+              <label for="fpSort" data-i18n="fp.sort">Sortuj</label>
+              <select id="fpSort" class="fp__sort">
+                <option value="floor" data-i18n="fp.sortFloor">Piętro</option>
+                <option value="area-asc" data-i18n="fp.sortAreaAsc">Metraż ↑</option>
+                <option value="area-desc" data-i18n="fp.sortAreaDesc">Metraż ↓</option>
+                <option value="price-asc" data-i18n="fp.sortPriceAsc">Cena ↑</option>
+                <option value="price-desc" data-i18n="fp.sortPriceDesc">Cena ↓</option>
+              </select>
+            </div>
+          </div>
+
+          <p class="fp__count" id="fpCount" role="status" aria-live="polite"></p>
+          <div class="fp__grid" id="fpGrid"></div>
+          <p class="fp__empty" id="fpEmpty" hidden data-i18n="fp.empty">
+            Brak apartamentów spełniających kryteria. Zmień filtry.
+          </p>
+        </div>
       </div>
     </section>
+
+    <!-- Floor-plan detail modal -->
+    <div class="fp-modal" id="fpModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="fpModalTitle">
+      <div class="fp-modal__overlay" data-fp-close></div>
+      <div class="fp-modal__panel" role="document">
+        <button class="fp-modal__close" type="button" data-fp-close aria-label="Zamknij">&times;</button>
+        <div class="fp-modal__body" id="fpModalBody"><!-- injected --></div>
+      </div>
+    </div>
 
     <!-- ░░ Amenities ░░ -->
     <section class="section amenities">
@@ -450,6 +465,7 @@
   </footer>
 
   <script src="assets/js/i18n.js" defer></script>
+  <script src="assets/js/floorplans.js" defer></script>
   <script src="assets/js/main.js" defer></script>
 </body>
 </html>
